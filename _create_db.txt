@@ -1,0 +1,25 @@
+create database Helpdesk;
+use Helpdesk;
+
+create table student ( 
+	student_id INT(10), 
+	name char(50), 
+	email char(50),
+	phone_no INT(10),
+	PRIMARY KEY(student_id) 
+);
+
+
+create table course (  
+	course_code char(15),
+	course_name char(50), 
+	PRIMARY KEY(course_code) 
+);
+
+
+create table helper ( 
+	student_id INT(10), 
+	course_code char(15),
+	FOREIGN KEY (student_id ) REFERENCES student(student_id ),
+	FOREIGN KEY (course_code ) REFERENCES course(course_code )
+);
