@@ -1,10 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:LavenderBlush;"></body>
+    </br>   
+    </br>
+	
+
+
+
 <?php
+
 	require_once('db_connect.php');
 	$connect = mysqli_connect( HOST, USER, PASS, DB )
 		or die("Can not connect");
 
 	$course_code = $_GET["course_code"];
-	echo "$course_code";
+	echo "<h2>Information of the helper-student<h2>";
+	
 	$results = mysqli_query( $connect, "SELECT * FROM student INNER JOIN helper ON student.student_id=helper.student_id Where course_code='$course_code' ; " )
 		or die("Can not execute query");
 
@@ -27,6 +38,8 @@
 
 	echo "</table> \n";
 
-	echo "<p><a href=provideInfo_input.php>CREATE a new record</a>";
+	echo "<p><a href=provideInfo_input.php>Provide Information</a>";
 ?>
 
+</body>
+</html>
