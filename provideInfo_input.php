@@ -19,7 +19,7 @@
 
 	<p>
 
-	<input type=submit value=Insert>
+	<input type=submit value=submit>
 
 </form>
 
