@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Helping Desk</title>
+   <title>Helping Desk</title> 
   </head>
   <body> 
-    <body style="background-color:LightGray;"></body>
+    <body style="background-color:MistyRose;"></body>
     </br>   
     </br>
+    
+
+
+    <h1>Help-Desk</h1>
+      </br>
+      <h3>Provide Helper's details</h3>
     <button onclick="window.location.href='http://localhost/Software_project/provideInfo_input.php';">
       Provide Information
     </button>
-    </br>   
-    </br>
-    Select course you need help
-    </br>   
-    
+      </br>   
+      </br>
+      </br>
+    <h3>Select course you need help</h3>
+       
 
-    <label for="Options">Options :</label>
-    </br>
+    <label for="Options">Course Code :</label>
+      </br>
+      
 
 
 
@@ -35,7 +42,7 @@
 
                 while( $rows = mysqli_fetch_array( $results ) ) {
                     extract( $rows );
-                    echo "<option name='month'>".$course_code."</option>";
+                    echo "<option name='option'>".$course_code."</option>";
 
                 }
                 ?>
