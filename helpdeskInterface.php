@@ -16,13 +16,14 @@
     </br>   
     
 
-<label for="cars">options :</label>
+    <label for="Options">Options :</label>
+    </br>
 
 
 
   
-<form method=get action=update_result.php>
-    <select type="text" value="Select course" class="form-control" name ="Course_code">
+<form method=get action=read.php>
+    <select type="text" value="Select course" class="form-control" name ="course_code">
                 <?php
                 require_once('db_connect.php');
                 $connect = mysqli_connect( HOST, USER, PASS, DB )
