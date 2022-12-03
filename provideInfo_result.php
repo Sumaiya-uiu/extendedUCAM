@@ -19,11 +19,11 @@
 		or die("Can not execute query");
 
 
-
+	
 	echo "Record inserted:<br> student_id = $student_id <br> course_code = $course_code";
 
 
 
-	echo "<p><a href=read.php>READ all records</a>";
+	echo "<p><a href=helpdeskinterface.php>Go to helper-desk</a>";
 
 ?>
