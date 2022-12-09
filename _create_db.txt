@@ -1,11 +1,10 @@
-create database Helpdesk;
-use Helpdesk;
+CREATE DATABASE learning_management;
 
 create table student ( 
-	student_id INT(10), 
+	student_id char(15), 
 	name char(50), 
 	email char(50),
-	phone_no INT(10),
+	phone_no char(15),
 	PRIMARY KEY(student_id) 
 );
 
@@ -18,8 +17,29 @@ create table course (
 
 
 create table helper ( 
-	student_id INT(10), 
+	student_id char(15),
 	course_code char(15),
 	FOREIGN KEY (student_id ) REFERENCES student(student_id ),
 	FOREIGN KEY (course_code ) REFERENCES course(course_code )
+);
+
+create table course_section ( 
+	course_id INT(10) AUTO_INCREMENT, 
+	section_name char(10), 
+	starting_time INT(10),
+	ending_time INT(10),
+	day1 char(15),
+	day2 char(15),
+	course_code char(15),
+	PRIMARY KEY(course_id),
+	FOREIGN KEY (course_code) REFERENCES course(course_code)
+);
+
+create table student_course_section ( 
+    	student_course_section_id INT(10) AUTO_INCREMENT, 
+	student_id char(15), 
+	course_code char(15),
+    	PRIMARY KEY(student_course_section_id),
+	FOREIGN KEY (student_id) REFERENCES student(student_id),
+	FOREIGN KEY (course_code) REFERENCES course(course_code)
 );

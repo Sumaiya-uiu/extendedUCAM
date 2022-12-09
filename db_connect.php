@@ -2,7 +2,7 @@
 
 	// Defining Constants
 	define( 'HOST', 'localhost' );
-	define( 'DB', 'Helpdesk' );
+	define( 'DB', 'learning_management' );
 	define( 'USER', 'root' );
 	define( 'PASS', '' );
 ?>
