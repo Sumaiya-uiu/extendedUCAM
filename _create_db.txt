@@ -23,6 +23,12 @@ create table helper (
 	FOREIGN KEY (course_code ) REFERENCES course(course_code )
 );
 
+create table prerequisite  ( 
+	course_code char(15),
+	FOREIGN KEY (course_code ) REFERENCES course(course_code ),
+    prerequisite_course char(15) 
+);
+
 create table course_section ( 
 	course_id INT(10) AUTO_INCREMENT, 
 	section_name char(10), 
