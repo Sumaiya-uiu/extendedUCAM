@@ -18,9 +18,9 @@
 	<h1>Provide Information</h1>
 
 <?php
-	require_once('C:\xampp\htdocs\UCAM\extendedUCAM\lib\db_connect.php');
+	require('..\lib\db_connect.php');
 
-	$connect = mysqli_connect( HOST, USER, PASS, DB )
+	$con = mysqli_connect( HOST, USER, PASS , DB)
 		or die("Can not connect");
 
     $student_id = '';
@@ -33,7 +33,7 @@
         $student_id = $_GET['student_id'];
         $password = $_GET['password'];
 
-        $result = mysqli_query( $connect, "SELECT * FROM student WHERE student_id = '$student_id' AND password = '$password'" );
+        $result = mysqli_query( $con, "SELECT * FROM student WHERE student_id = '$student_id' AND password = '$password'" );
 
         if(mysqli_num_rows($result) == 0)
         {
@@ -42,12 +42,12 @@
             $_SESSION["student_id"] = $student_id;
             $_SESSION["password"] = $password;
 
-            header("Location: index.html");
+            header("Location:../Student/Elective/elective.php");
         }
     }
 ?>
 
-<form method=get action=login.php>
+<form method=post action="../Student/Elective/elective.php">
 <h3>
 	Student ID : <input type=text name=student_id> <br>
 
