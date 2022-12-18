@@ -49,3 +49,8 @@ create table student_course_section (
 	FOREIGN KEY (student_id) REFERENCES student(student_id),
 	FOREIGN KEY (course_code) REFERENCES course(course_code)
 );
+
+
+
+
+ALTER TABLE student ADD password varchar(100);
