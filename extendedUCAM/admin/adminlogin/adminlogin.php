@@ -18,7 +18,7 @@
 	<h1>Provide Information</h1>
 
 <?php
-	require_once('C:\xampp\htdocs\UCAM\extendedUCAM\lib\db_connect.php');
+	require_once('../../lib/db_connect.php');
 
 	$connect = mysqli_connect( HOST, USER, PASS, DB )
 		or die("Can not connect");
@@ -42,7 +42,7 @@
             $_SESSION["admin_id"] = $admin_id;
             $_SESSION["password"] = $password;
 
-            header("Location: C:\xampp\htdocs\UCAM\extendedUCAM\Student\Dashboard\navbar.html");
+            header("Location:../admin.php");
         }
     }
 ?>
