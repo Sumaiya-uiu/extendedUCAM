@@ -13,7 +13,7 @@
     <h1>Course Selection</h1>
       </br>
 
-<form method=get action=read.php>
+<form method=get action=selected_course_by_student.php>
     <select type="text" value="Course Section" class="form-control" name ="course_code">
                 <?php
                 require_once('db_connect.php');
