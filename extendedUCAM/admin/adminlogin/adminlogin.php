@@ -8,20 +8,20 @@
     <body style="background-color:Thistle;"></body>
     </br>   
     </br>
-	<style>
-		h1 {text-align: center;}
-		h3 {text-align: center;}
-		p {text-align: center;}
-		div {text-align: center;}
-	</style>
-	
-	<h1>Provide Information</h1>
+    <style>
+        h1 {text-align: center;}
+        h3 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+    </style>
+    
+    <h1>Provide Information</h1>
 
 <?php
-	require_once('../../lib/db_connect.php');
+    require('..\..\lib\db_connect.php');
 
-	$connect = mysqli_connect( HOST, USER, PASS, DB )
-		or die("Can not connect");
+    $con = mysqli_connect( HOST, USER, PASS , DB)
+        or die("Can not connect");
 
     $admin_id = '';
     $password = '';
@@ -33,29 +33,29 @@
         $admin_id = $_GET['admin_id'];
         $password = $_GET['password'];
 
-        $result = mysqli_query( $connect, "SELECT * FROM admin WHERE admin_id = '$admin_id' AND password = '$password'" );
+        $result = mysqli_query( $con, "SELECT * FROM admin WHERE admin_id = '$admin_id' AND password = '$password'" );
 
-        if(!$result || mysqli_num_rows($result) == 0)
+        if(mysqli_num_rows($result) == 0)
         {
             $invalid_credential = true;
         } else {
             $_SESSION["admin_id"] = $admin_id;
             $_SESSION["password"] = $password;
 
-            header("Location:../admin.php");
+            header("Location:../adminhome.php");
         }
     }
 ?>
 
-<form method=get action=adminlogin.php>
+<form method=post action="../adminhome.php">
 <h3>
-	Admin ID : <input type=text name=admin_id> <br>
+    Admin ID : <input type=text name=admin_id> <br>
 
-	<p>
+    <p>
 
-	Password : <input type=password name=password> <br>
+    Password : <input type=password name=password> <br>
 
-	<p>
+    <p>
 
     <?php 
     if($invalid_credential){
@@ -63,7 +63,7 @@
     }
     ?>
 
-	<h3><input type=submit value=Submit>
+    <h3><input type=submit value=Submit>
 </h1>
 </form>
 
