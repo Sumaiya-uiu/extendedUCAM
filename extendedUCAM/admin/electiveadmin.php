@@ -71,7 +71,7 @@
 		or die("Can not execute query");
 echo "<table class='table table-bordered m-5 me-3'>";
 echo "<br>";
-echo "<thead> <tr> <th>SL</th> <th>Code</th> <th>Title</th> <th>Credits</th> <th>Group</th><th>Offered Trimester</th> <th>Total request</th> <th>Add to Pre-advising</th> </tr> </thead> <tbody>\n";
+echo "<thead> <tr> <th>SL</th> <th>Code</th> <th>Title</th> <th>Credits</th> <th>Group</th><th>Offered Trimester</th> <th>Total request</th> <th>Add to Pre-advising</th> <th></th> </tr> </thead> <tbody>\n";
 
 	while( $rows = mysqli_fetch_array( $results ) ) {
 		extract( $rows );

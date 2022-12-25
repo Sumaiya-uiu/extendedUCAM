@@ -66,6 +66,7 @@
 	<h3><input type=submit value=Submit>
 </h1>
 </form>
+<a href = 'logout.php'> Logout </a>
 
   </body>
 </html>

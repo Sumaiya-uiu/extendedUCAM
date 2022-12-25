@@ -53,7 +53,7 @@
 	                            <a class="nav-link active" href="#">Co-ordinator</a>
 	                        </li>
 	                        <li class="nav-item">
-	                            <a class="nav-link active" href="#">Elective
+	                            <a class="nav-link active" href="electivestudent.php">Elective
 	                                Course</a>
 	                        </li>
 	                        <li class="nav-item">
