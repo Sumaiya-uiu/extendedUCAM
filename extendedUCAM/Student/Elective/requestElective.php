@@ -8,7 +8,7 @@
 	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 	        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	    <title>Student</title>
+	    <title>Requested course</title>
 	</head>
 	<style type="text/css">
 	    .nav-item {
@@ -78,28 +78,9 @@
 	require_once('../../lib/db_connect.php');
 	$connect = mysqli_connect( HOST, USER, PASS, DB )
 		or die("Can not connect");
-	$results = mysqli_query( $connect, "SELECT * FROM electiveadmin" )
-		or die("Can not execute query");
-echo "<table class='table table-bordered me-5'>";
-echo "<br>";
-echo "<thead> <tr> <th>SL</th> <th>Code</th> <th>Title</th> <th>Credits</th> <th>Group</th><th>Offered Trimester</th> <th>Total request</th><th>Add </th></tr> </thead> <tbody>\n";
-
-	while( $rows = mysqli_fetch_array( $results ) ) {
-		extract( $rows );
-		echo "<tr>";
-		echo "<td> $id </td>";
-		echo "<td> $course_code </td>";
-		echo "<td> $course_title </td>";
-		echo "<td> $credits </td>";
-		echo "<td> $elective_group </td>";
-		echo "<td> $offered_sem </td>";
-		echo "<td> $total_request </td>";
-		echo "<td> <a href = 'requestElective.php?course_code=$course_code'> Add </a> </td>";
-		echo "</tr> \n";
-	}
-
-	echo "</table> \n";
-	echo "<br>";
+	// $results = mysqli_query( $connect, "SELECT * FROM electiveadmin" )
+	// 	or die("Can not execute query");
+    echo "<h1>This is student request page!</h1>";
 
 	// echo "<br><p><a href=electiverequest.php><button class='ui blue button'>Choose Elective</button></a></p>";
 
