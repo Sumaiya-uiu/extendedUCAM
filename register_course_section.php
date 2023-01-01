@@ -3,11 +3,13 @@
 ?>
 <!DOCTYPE html>
 <html>
-<body style="background-color:LavenderBlush;"></body>
+<head>
+    <link rel="stylesheet" href="register_course_section.css">
+</head>
+<body style="background-color:White;"></body>
     </br>   
     </br>
-	
-
+	<div class="container">
 
 
 <?php
@@ -17,7 +19,7 @@
 		or die("Can not connect");
 
 	$course_code = $_GET["course_code"];
-	echo "<h2>Information of the helper-student<h2>";
+	echo "<h2>Selected Courses<h2>";
 	
 	$results = mysqli_query( $connect, 
         "SELECT * 
@@ -27,7 +29,7 @@
         Where course_code='$course_code' ; " )
 		or die("Can not execute query");
 
-
+    echo "<div class='table'> \n";
 	echo "<table border> \n";
 	echo "<th>Course code</th> <th>section</th> <th>Starting Time</th> <th>Ending Time</th> <th>Day</th>\n";
 
@@ -53,15 +55,17 @@
 	}
 
 	echo "</table> \n";
+    echo "</div> \n";
 
-	echo "<p><a href=provideInfo_input.php>Select Section</a>";
+	// echo "<p><a href=provideInfo_input.php>Select Section</a>";
 ?>
 
     <form method=get action=register_course_result.php>
-        <h3>Select Section</h3>
+        </br>
+        <!-- <h4>Select Section</h4> -->
         
 
-        <label for="Options">Course Code :</label>
+        <label for="Options">Select Section</label>
       </br>
         <select type="text" value="Select course" class="form-control" name ="section_name">
             <?php            
@@ -80,6 +84,7 @@
         <input type="submit" value="Select" />
 
     </form>
+    </div>
 
 </body>
 </html>

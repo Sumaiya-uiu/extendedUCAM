@@ -3,7 +3,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<body style="background-color:LavenderBlush;"></body>
+<body style="background-color:White;"></body>
     </br>   
     </br>
 	
@@ -46,6 +46,7 @@
 	echo "</table> \n";
 ?>
 <div>
+	<br>
     <a href="register_course.php">Register Course</a>
 </div>
 </body>

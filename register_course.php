@@ -18,14 +18,14 @@
         </style>
     </head>
 
-    <body style="background-color:MistyRose;">
+    <body style="background-color:White;">
 
     <form method=get action=register_course_section.php>
         <h3>Select course you want to register</h3>
         
 
         <label for="Options">Course Code :</label>
-      </br>
+      </br></br>
         <select type="text" value="Select course" class="form-control" name ="course_code">
             <?php
             require_once('db_connect.php');

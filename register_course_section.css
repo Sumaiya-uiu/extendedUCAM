@@ -1,0 +1,13 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    margin: auto;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+.table{
+    width: 27%;
+    margin: auto;
+    background-color: gainsboro;
+}

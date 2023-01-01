@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
   <body> 
-    <body style="background-color:Thistle;"></body>
+    <body style="background-color:White;"></body>
     </br>   
     </br>
 	<style>
@@ -14,8 +14,22 @@
 		p {text-align: center;}
 		div {text-align: center;}
 	</style>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav style="background-color: orange;width: auto;height: 80px;">
+        <div style="color: white;text-align: center; font-size: 32px; font-weight: bold; padding-top: 20px;">Extended
+            UCAM</div>
+
+    </nav>
+    <body style="background-color:white;"></body>
 	
-	<h1>Provide Information</h1>
+	<h1>Login</h1>
 
 <?php
 	require_once('db_connect.php');
