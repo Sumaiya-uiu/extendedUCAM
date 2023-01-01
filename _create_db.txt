@@ -51,3 +51,17 @@ create table student_course_section (
 );
 
 ALTER TABLE student ADD password varchar(100);
+
+ALTER TABLE teacher_profile ADD password varchar(100);
+
+Create table teacher_notification (
+    notification_id int PRIMARY KEY AUTO_INCREMENT,
+    student_id int(10),
+    course_id int(10),
+    action varchar(100),
+    message varchar(200),
+    FOREIGN KEY (student_id) REFERENCES student(student_id),
+    FOREIGN KEY (course_id) REFERENCES course_section(course_id)
+);
+
+ALTER TABLE course add COLUMN required_approval int;

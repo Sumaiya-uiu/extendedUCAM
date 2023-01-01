@@ -7,8 +7,13 @@
 		or die("Can not connect");
 
     $student_id = '';
+
+    $logged_in_id = '';
+    $logged_in_name = '';
+
     $logged_in_student_id = '';
     $password = '';
+
     $student_name = '';
 
     $logged_in = false;
@@ -30,6 +35,25 @@
             $logged_in_student_id = $student_id;
             extract(mysqli_fetch_array($result));
             $student_name = $name;
+            $logged_in_id = $student_id;
+            $logged_in_name = $student_name;
+        }
+    }
+
+    if( isset($_SESSION['teacher_id']) && isset($_SESSION['password']) )
+    {
+        $teacher_id = $_SESSION['teacher_id'];
+        $password = $_SESSION['password'];
+
+        $result = mysqli_query( $connect, "SELECT * FROM teacher_profile WHERE teacher_id = '$teacher_id' AND password = '$password'" );
+
+        if(mysqli_num_rows($result) > 0)
+        {
+            $logged_in = true;
+            $logged_in_teacher_id = $teacher_id;
+            extract(mysqli_fetch_array($result));
+            $logged_in_id = $teacher_id;
+            $logged_in_name = $teacher_name;
         }
     }
 ?>
@@ -46,9 +70,9 @@ body{
 .top-bar-login {
     line-height: 50px;
     text-align: center;
-    background-color: black;
+    background-color: orange;
     color : White;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -58,7 +82,7 @@ body{
 </style>
 
 <div class='top-bar-login'>
-    <?php echo $student_name ?>
+    <?php echo $logged_in_name ?>
     -
     <a href='logout.php'>
         Logout
