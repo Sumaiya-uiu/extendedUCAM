@@ -159,7 +159,7 @@
                         <span class="form-label">Selected Date</span>
                         <input
                           class="form-control"
-                          type="date"
+                          type="text"
                           value="<?php echo $counselling_date; ?>"
                           name="date"
                           readonly

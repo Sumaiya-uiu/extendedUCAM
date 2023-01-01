@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extended ELMS</title>
-    <link rel="stylesheet" href="../css/style-booking1.css">
+    <link rel="stylesheet" href="">
     <link
       href="http://fonts.googleapis.com/css?family=Playfair+Display:900"
       rel="stylesheet"
@@ -46,54 +46,25 @@
     </header>
     <main>
         <div>
-            <h2 class="text-center mt-5 mb-5">Requested Students For Counselling</h2>
+            <h2 class="text-center mt-5 mb-5">Teacher Schedule Maintain</h2>
         </div>
-      <div class="container">
-        <table class="table table-striped table-dark text-center">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Student Name</th>
-                    <th scope="col">Day</th>
-                    <th scope="col">Start Time</th>
-                    <th scope="col">End Time</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Completion</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    $query = "SELECT * FROM counselling_booking WHERE teacher_id = $teacher_id ;";
-                    $execute = mysqli_query($conn, $query);
-                    if($execute->num_rows>0){ 
-                        while($rd = mysqli_fetch_assoc($execute)){ 
-                            $id = $rd['counselling_booking_id'];
-                            // $student_name = $rd['student_name'];
-                            $day = $rd['counsellingDay'];
-                            $startTime = $rd['startTime'];
-                            $endTime = $rd['endTime'];
-                            $date = $rd['counsellingDate'];
-                ?>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark Jukerburge</td>
-                    <td><?php echo $day ?></td>
-                    <td><?php echo $startTime ?></td>
-                    <td><?php echo $endTime ?></td>
-                    <td><?php echo $date ?></td>
-                    <td>
-                        <a href="./completion.php?id=<?php echo $id; ?>">
-                            <button type="button" class="btn btn-primary">Complete</button>
-                        </a>
-                    </td>
-                </tr>
-                <?php
-                        }
-                    }
-                ?>
-            </tbody>
-        </table>
-      </div>
+        <div class="mx-auto w-50">
+            <form class="border border-primary rounded p-4" action="./scheduleProcess.php?teacher_id=<?php echo $teacher_id; ?>" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Start Time</label>
+                    <input type="text" class="form-control" id="startTime" aria-describedby="emailHelp" name="startTime" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">End Time</label>
+                    <input type="text" class="form-control" id="endTime" aria-describedby="emailHelp" name="endTime" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Select Date</label>
+                    <input type="date" class="form-control" id="selectDate" aria-describedby="emailHelp" name="selectDate">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
     </main>
     <footer>
       <!-- This is footer section -->

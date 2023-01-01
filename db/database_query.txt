@@ -21,10 +21,9 @@ INSERT INTO teacher_profile (teacher_id, teacher_name, teacher_email, teacher_ti
 CREATE TABLE teacherinformation(
     id int AUTO_INCREMENT NOT NULL,
 	teacher_id int NOT NULL,
-    counselling_date varchar(45),
 	counselingDay varchar(45),
     startTime varchar(100),
-    endTime varchar(100),
+    endtTime varchar(100),
     room_Number varchar(100),
     PRIMARY KEY(id),
     FOREIGN KEY(teacher_id) REFERENCES teacher_profile(teacher_id)ON DELETE CASCADE ON UPDATE CASCADE
@@ -48,5 +47,19 @@ CREATE TABLE counselling_booking(
     counsellingDate varchar(100),
     course varchar(100),
     PRIMARY KEY(counselling_booking_id),
+    FOREIGN KEY(teacher_id) REFERENCES teacher_profile(teacher_id)ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+Schedule process
+----------------
+DROP TABLE IF EXISTS teacherunavailable;
+CREATE TABLE teacherUnavailable(
+    id int AUTO_INCREMENT NOT NULL,
+	teacher_id int NOT NULL,
+	start_time varchar(100),
+    end_time varchar(100),
+    selectDate varchar(100),
+    PRIMARY KEY(id),
     FOREIGN KEY(teacher_id) REFERENCES teacher_profile(teacher_id)ON DELETE CASCADE ON UPDATE CASCADE
 );
