@@ -44,5 +44,6 @@ VALUES ('$student_id', '$name', '$email', '$phone_no','".md5($password)."')";
 </form>
 </div>
 <?php } ?>
+
 </body>
 </html>

@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
   <body> 
+
     <body style="background-color:Thistle;"></body>
     </br>   
     </br>
@@ -66,6 +67,7 @@
     <h3><input type=submit value=Submit>
 </h1>
 </form>
+<a href="adminregistration.php">Don't have account?Register here...</a>
 
   </body>
 </html>

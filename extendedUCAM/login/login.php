@@ -17,7 +17,7 @@
 	
 	<h1>Provide Information</h1>
 
-<?php
+<?php 
 	require('..\lib\db_connect.php');
 
 	$con = mysqli_connect( HOST, USER, PASS , DB)
@@ -58,6 +58,7 @@
 	<p>
 
     <?php 
+    
     if($invalid_credential){
         echo "<p style='color:red'>Invalid student id or password</p>";
     }
@@ -66,7 +67,7 @@
 	<h3><input type=submit value=Submit>
 </h1>
 </form>
-<a href = 'logout.php'> Logout </a>
+<a href = 'registration.php'> Don't have any account?Register here... </a>
 
   </body>
 </html>

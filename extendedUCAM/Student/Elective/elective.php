@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 	<html lang="en">
 	<head>
 	    <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 	        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	    <title>Elective course</title>
+	    <title>Student Elective course</title>
 	</head>
 	<style type="text/css">
 	    .nav-item {
@@ -79,6 +79,7 @@
 	</script>
 
 	<!--end of Navigation bar-->
+	<a href="../../login/login.php"><button>Logout</button></a>
 
 	</body>
 	</html>
