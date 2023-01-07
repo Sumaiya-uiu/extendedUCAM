@@ -1,0 +1,33 @@
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191002', 'BIO 3105', '08.30', '10.00', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191002', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191002', 'CSE 2233', '15.00', '16.30', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191001', 'ACT 2111', '10.05', '11.35', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191001', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191001', 'CSE 2215', '13.30', '15.00', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191001', 'CSE 2233', '15.00', '16.30', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191003', 'ACT 2111', '10.05', '11.35', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191003', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191003', 'CSE 2215', '13.30', '15.00', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191004', 'BIO 3105', '08.30', '10.00', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191004', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191004', 'CSE 2215', '13.30', '15.00', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191005', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191005', 'CSE 2233', '15.00', '16.30', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191124', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191124', 'CSE 2233', '15.00', '16.30', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191127', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191127', 'CSE 2215', '13.30', '15.00', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191128', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191128', 'CSE 2233', '15.00', '16.30', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191125', 'CSE 1111', '11.40', '13.10', 'sat');
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191125', 'CSE 2233', '15.00', '16.30', 'sat');
+
+INSERT INTO `time_schedule` (`id`, `student_id`, `course_code`, `starting_time`, `ending_time`, `day`) VALUES (NULL, '011191126', 'CSE 1111', '11.40', '13.10', 'sat');

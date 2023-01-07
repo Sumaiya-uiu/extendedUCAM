@@ -1,0 +1,78 @@
+CREATE DATABASE learning_management;
+
+create table student ( 
+	student_id char(15), 
+	name char(50), 
+	email char(50),
+	phone_no char(15),
+	PRIMARY KEY(student_id) 
+);
+
+
+create table course (  
+	course_code char(15),
+	course_name char(50), 
+	PRIMARY KEY(course_code) 
+);
+
+
+create table helper ( 
+	student_id char(15),
+	course_code char(15),
+	FOREIGN KEY (student_id ) REFERENCES student(student_id ),
+	FOREIGN KEY (course_code ) REFERENCES course(course_code )
+);
+
+create table prerequisite  ( 
+	course_code char(15),
+	FOREIGN KEY (course_code ) REFERENCES course(course_code ),
+    prerequisite_course char(15) 
+);
+
+create table course_section ( 
+	course_id INT(10) AUTO_INCREMENT, 
+	section_name char(10), 
+	starting_time INT(10),
+	ending_time INT(10),
+	day1 char(15),
+	day2 char(15),
+	course_code char(15),
+	PRIMARY KEY(course_id),
+	FOREIGN KEY (course_code) REFERENCES course(course_code)
+);
+
+create table student_course_section ( 
+    	student_course_section_id INT(10) AUTO_INCREMENT, 
+	student_id char(15), 
+	course_code char(15),
+    	PRIMARY KEY(student_course_section_id),
+	FOREIGN KEY (student_id) REFERENCES student(student_id),
+	FOREIGN KEY (course_code) REFERENCES course(course_code)
+);
+
+ALTER TABLE student ADD password varchar(100);
+
+ALTER TABLE teacher_profile ADD password varchar(100);
+
+Create table teacher_notification (
+    notification_id int PRIMARY KEY AUTO_INCREMENT,
+    student_id int(10),
+    course_id int(10),
+    action varchar(100),
+    message varchar(200),
+    FOREIGN KEY (student_id) REFERENCES student(student_id),
+    FOREIGN KEY (course_id) REFERENCES course_section(course_id)
+);
+
+ALTER TABLE course add COLUMN required_approval int;
+
+ALTER TABLE course_section ADD COLUMN capacity int;
+
+Create table admin(
+    username varchar(100),
+    password varchar(100)
+);
+
+INSERT INTO admin values("admin", 12345);
+
+ALTER TABLE teacher_notification ADD COLUMN stage varchar(100);

@@ -1,0 +1,233 @@
+.maincontainer{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+
+}
+
+
+.container1{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    height: 800px;
+    width: 450px;
+    flex-direction: column;
+    /* flex-direction: row-reverse; */
+    justify-content: start;
+    align-items: center;
+    /* align-items: flex-end;
+    align-items: flex-start; */
+    flex-wrap: wrap;
+
+}
+
+
+.container2{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    height: 800px;
+    width: 450px;
+    flex-direction: column;
+    /* flex-direction: row-reverse; */
+    justify-content: space-between;
+    align-items: center;
+    /* align-items: flex-end;
+    align-items: flex-start; */
+    flex-wrap: wrap; 
+
+}
+
+.container3{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    height: 800px;
+    width: 450px;
+    flex-direction: column;
+    /* flex-direction: row-reverse; */
+    justify-content: space-between;
+    align-items: center;
+    /* align-items: flex-end;
+    align-items: flex-start; */
+    flex-wrap: wrap; 
+
+}
+
+
+.fitems{
+
+    background-color: white;
+    border: 1px solid  black;
+    margin: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+.fcontaineritems1{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    justify-content: start;
+    align-items: start;
+    margin: 5px; 
+    
+}
+
+.fcontaineritems2{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    justify-content: start;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: 5px; 
+}
+
+.fcontaineritems3{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 5px; 
+    align-items: flex-start;
+}
+
+.fcontaineritems4{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    margin: 5px; 
+    align-items: flex-start;
+    height: 150px;
+    width: 430px;
+    justify-content: space-around;
+}
+
+.fcontaineritems5{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    margin: 5px; 
+    align-items: flex-start;
+    height: 150px;
+    width: 430px;
+    justify-content: space-between;
+}
+
+
+.fcontaineritems6{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    justify-content: start;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: 5px; 
+    height: 150px;
+    width: 430px;
+}
+
+.fcontaineritems7{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    justify-content: start;
+    align-items: end;
+    margin: 5px; 
+    height: 150px;
+    width: 430px;
+}
+
+.fcontaineritems8{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    justify-content: end;
+    align-items: end;
+    margin: 5px; 
+    height: 150px;
+    width: 430px;
+}
+
+.fcontaineritems9{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    height: 150px;
+    width: 430px;
+    flex-direction: column;
+    /* flex-direction: row-reverse; */
+    justify-content: space-between;
+    align-items: center;
+    /* align-items: flex-end;
+    align-items: flex-start; */
+    flex-wrap: wrap; 
+}
+
+.fcontaineritems10{
+    display: flex;
+    background-color: white;
+    border: 1px solid  black;
+    justify-content: start;
+    align-items: end;
+    height: 150px;
+    width: 430px;
+}
+
+
+.item31{
+    /* flex-grow: 4px;  */
+    align-self: center;
+    height: 50px;
+    width: 400px;
+}
+
+.item32{
+    /* flex-grow: 4px;  */
+    align-self: center;
+    height: 50px;
+    width: 400px;
+}
+
+
+.item91
+{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+
+    flex-direction: column;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    margin-bottom: auto;
+    /* align-items: flex-end;
+    align-items: flex-start; */
+    flex-wrap: wrap; 
+    flex: 1 1 160px;
+
+}
+
+.item101
+{
+
+    align-items: flex-start;
+    margin-bottom: top;
+    flex-direction: column;
+    /* flex-direction: row-reverse; */
+    justify-content: start;
+    align-items: end;
+    /* align-items: flex-end;
+    align-items: flex-start; */
+    flex-wrap: wrap;
+
+}

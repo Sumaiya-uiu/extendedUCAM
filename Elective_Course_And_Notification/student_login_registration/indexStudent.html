@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+	<style>
+		.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f1c32c;
+    color: #ffffff;
+}
+.login form input[type="submit"]:hover {
+    background-color: #f1c32c;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f1c32c;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+body {
+    background-color: #eee;
+}
+	</style>
+	<body>
+		<div class="login">
+			<h1>Login</h1>
+			<form action="studentAuthenticate.php" method="post">
+				<input style="color: #eeba2c;"type="hidden" name="id" placeholder="ID" id="ID" required>
+				<label for="Student_id">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="student_id" placeholder="Student ID" id="stID" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<input type="submit" value="Login">
+			</form>
+			<a href="studentRegistration.php" style="color:black; font-size:larger;">Don't have account?Want to register....</a>
+		</div>
+	</body>
+</html>

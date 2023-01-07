@@ -1,0 +1,65 @@
+DROP TABLE IF EXISTS teacherinformation;
+DROP TABLE IF EXISTS teacher_profile;
+
+
+CREATE TABLE teacher_profile(
+    teacher_id int AUTO_INCREMENT NOT NULL,
+	teacher_name varchar(45),
+    teacher_email varchar(100),
+    teacher_title varchar(100),
+    teacher_img varchar(100),
+    PRIMARY KEY(teacher_id)
+);
+------------Duming data---------------
+INSERT INTO teacher_profile (teacher_id, teacher_name, teacher_email, teacher_title, teacher_img) VALUES
+(1,'Dr. Swakkhar Shatabda', 'swakkhar@cse.uiu.ac.bd', 'Professor', '1.jpg' ),
+(2,'Dr. Dewan Md. Farid', 'dewanfarid@cse.uiu.ac.bd', 'Professor', '2.jpg' ),
+(3,'Mr. Md. Rayhan Ahmed', 'rayhan@cse.uiu.ac.bd', 'Assistant Professor', '3.jpg' ),
+(4,	'Mr. Tapotosh Ghosh', 'tapotosh@cse.uiu.ac.bd', 'Lecturer', '4.jpg' )
+---------------------------------------
+
+CREATE TABLE teacherinformation(
+    id int AUTO_INCREMENT NOT NULL,
+	teacher_id int NOT NULL,
+	counselingDay varchar(45),
+    startTime varchar(100),
+    endtTime varchar(100),
+    room_Number varchar(100),
+    PRIMARY KEY(id),
+    FOREIGN KEY(teacher_id) REFERENCES teacher_profile(teacher_id)ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+------------Duming data------------
+INSERT INTO teacherinformation(id,teacher_id, counselingDay, startTime, endtTime, room_Number) VALUES
+(1,101, 'Sat', '9:00AM', '11:30AM', '425'),
+(2, 101, 'Thu', '9:00AM', '11:30AM', '425')
+
+-----------------------------------
+
+
+DROP TABLE if EXISTS counselling_booking;
+CREATE TABLE counselling_booking(
+    counselling_booking_id int AUTO_INCREMENT NOT NULL,
+ 	teacher_id int NOT NULL,
+ 	counsellingDay varchar(45),
+    startTime varchar(100),
+    endTime varchar(100),
+    counsellingDate varchar(100),
+    course varchar(100),
+    PRIMARY KEY(counselling_booking_id),
+    FOREIGN KEY(teacher_id) REFERENCES teacher_profile(teacher_id)ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+Schedule process
+----------------
+DROP TABLE IF EXISTS teacherunavailable;
+CREATE TABLE teacherUnavailable(
+    id int AUTO_INCREMENT NOT NULL,
+	teacher_id int NOT NULL,
+	start_time varchar(100),
+    end_time varchar(100),
+    selectDate varchar(100),
+    PRIMARY KEY(id),
+    FOREIGN KEY(teacher_id) REFERENCES teacher_profile(teacher_id)ON DELETE CASCADE ON UPDATE CASCADE
+);

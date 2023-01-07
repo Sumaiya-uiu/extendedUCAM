@@ -1,0 +1,78 @@
+.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.loginStatusPanel {
+    margin-top: 5px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.head {
+    padding: 0 25px 0 25px;
+}
+
+img.floatLeft {
+    vertical-align: middle;
+}
+
+
+.loginStatusPanel .semesterStatusLabel {
+    display: inline-block;
+    width: 110px;
+    text-align: right;
+    color: #1f6c14;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+.loginStatusPanel .semesterStatus {
+    display: inline-block;
+    text-align: end;
+    font-weight: bold;
+    margin-left: 12px;
+    color: #cf6c6c;
+}
+
+.loginStyle {
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+    padding-right: 3px;
+    color: #5d5d5d;
+    text-decoration: none;
+}
+
+.logoutStyle {
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    padding: 3px 5px 2px 5px;
+    color: #f6f1ef;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+    background-color: #f2531c;
+    border-radius: 3px;
+}
+
+.nav-item {
+    font-weight: bold;
+    /* padding: 2px; */
+}
+
+
+
+.nav-item > a:hover, .nav-item > a:active {font-family: Georgia;}
